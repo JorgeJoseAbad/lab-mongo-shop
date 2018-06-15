@@ -5,7 +5,7 @@ const clear = require('clear');
 
 const db = new Database({ host: 'localhost:27017', database: 'myShop'});
 const questions = new Questions();
-
+debugger;
 function mainMenu(){
 	clear();
 	questions.showMainMenu();
@@ -27,13 +27,13 @@ function mainMenu(){
 				console.log(`Bye\n`);
 				db.close((error) => {
 					process.exit(0);
-				})
+				});
 				break;
 			default:
 				mainMenu();
 				break;
 		}
-	})
+	});
 }
 
 // Users
@@ -58,7 +58,7 @@ function usersMenu(){
 				usersMenu();
 				break;
 		}
-	})
+	});
 }
 
 function insertUser(){
@@ -76,7 +76,7 @@ function insertUser(){
 				});
 			}
 		});
-	})
+	});
 }
 
 function listUsers(){
@@ -95,7 +95,7 @@ function listUsers(){
 				usersMenu();
 			});
 		}
-	})
+	});
 }
 
 function deleteUser(){
@@ -112,8 +112,8 @@ function deleteUser(){
 					usersMenu();
 				});
 			}
-		})
-	})
+		});
+	});
 }
 
 // Products
@@ -138,7 +138,7 @@ function productMenu(){
 				productMenu();
 				break;
 		}
-	})
+	});
 }
 
 function insertProduct(){
@@ -175,7 +175,7 @@ function listProducts(){
 				productMenu();
 			});
 		}
-	})
+	});
 }
 
 function deleteProduct(){

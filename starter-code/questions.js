@@ -52,7 +52,7 @@ class Questions {
 
 	continue(callback = () => {}) {
 		this.rl.question('press enter to return: ', (answer) => {
-			callback()
+			callback();
 		});
 	}
 
@@ -70,12 +70,12 @@ class Questions {
 										address: { street, city, state, postalCode }
 									};
 								callback(user);
-							})
-						})
-					})
-				})
-			})
-		})
+							});
+						});
+					});
+				});
+			});
+		});
 	}
 
 	askingForDeleteUser(callback = (answer) => {} ){
@@ -96,10 +96,10 @@ class Questions {
 								category: category,
 							};
 						callback(product);
-					})
-				})
-			})
-		})
+					});
+				});
+			});
+		});
 	}
 
 	askingForDeleteProduct(callback = (answer) => {} ){

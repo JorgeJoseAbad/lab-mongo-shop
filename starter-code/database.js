@@ -6,10 +6,14 @@ const shoppingCarts = 'shoppingCarts';
 
 class Database {
 
+  //al constructor se accede desde new,
+  //ej const databas=new Database({host:"direccion",database:"nombreBBDD"})
   constructor({ host, database }) {
     this.url = `mongodb://${host}/${database}`;
   }
 
+ //connect es un comando de mongoDB driver for node.js (o de mongoDB a secas)
+ //pero no estoy seguro
   connect(callback = (error, database) => {}){
     if (this.database){
       callback(null, this.database);
@@ -36,6 +40,7 @@ class Database {
   // user is the object to insert into the collection
   // callback has two arguments error and result
   insertUser(user, callback = (error, result) => {}){
+    debugger;
     this.connect((error, database) => {
       if (error){
         callback(error);
@@ -162,7 +167,7 @@ class Database {
     });
   }
 
-  
+
 }
 
 module.exports = Database;

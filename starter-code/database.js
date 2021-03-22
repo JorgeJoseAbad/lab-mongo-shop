@@ -12,8 +12,8 @@ class Database {
     this.url = `mongodb://${host}/${database}`;
   }
 
- //connect es un comando de mongoDB driver for node.js (o de mongoDB a secas)
- //pero no estoy seguro
+ //connect(callback = ()=>{}) es mi metodo
+ //MongoDb.MongoClient.connect es el metodo de node mongoDb driver API.
   connect(callback = (error, database) => {}){
     if (this.database){
       callback(null, this.database);

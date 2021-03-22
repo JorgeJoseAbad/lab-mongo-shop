@@ -26,7 +26,9 @@ function mainMenu(){
 			case "0":
 				console.log(`Bye\n`);
 				db.close((error) => {
-					process.exit(0);
+					if (error){
+						console.error(error);
+					} else process.exit(0);
 				});
 				break;
 			default:

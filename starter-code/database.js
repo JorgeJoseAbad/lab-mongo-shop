@@ -50,7 +50,7 @@ class Database {
   // user is the object to insert into the collection
   // callback has two arguments error and result
   insertUser(user, callback = (error, result) => {}){
-    debugger;
+
     this.connect((error, database) => {
       if (error){
         callback(error);

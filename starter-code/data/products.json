@@ -17,13 +17,13 @@
     }
   ],
   "price":30.0
-}
+},
 {
   "name":"wooden hammer",
   "description":"Wooden hammer for work on forniture",
   "category": "tool",
   "price":50
-}
+},
 {
    "name": "WiredTiger T-shirt",
    "description":"Crafted from ultra-soft combed cotton, this essential t-shirt features sporty contrast tipping and MongoDB's signature leaf.",

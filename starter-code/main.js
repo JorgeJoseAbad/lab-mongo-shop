@@ -5,7 +5,7 @@ const clear = require('clear');
 
 const db = new Database({ host: 'localhost:27017', database: 'myShop'});
 const questions = new Questions();
-debugger;
+
 function mainMenu(){
 	clear();
 	questions.showMainMenu();

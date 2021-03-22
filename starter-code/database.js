@@ -1,4 +1,14 @@
 /*jshint esversion: 6*/
+
+/*
+ECMAScript 6
+Note: // @param callback Default value is a noop fn.
+function save(callback = ()=>{}) {
+   // do stuff...
+   callback();
+}
+*/
+
 const MongoDB = require('mongodb');
 const users = 'users';
 const products = 'products';
